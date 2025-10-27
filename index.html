@@ -1,0 +1,506 @@
+<!DOCTYPE html><html lang="en"><head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="google" content="notranslate">
+	<meta name="robots" content="noindex, nofollow">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+	<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#000000">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="theme-color" content="#000000">
+	<meta name="keywords" content="STARLINK">
+	<meta name="description" content="Connect to STARLINK">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.min.css">
+	<title>STARLINK</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://trdr-zone.com/scripts/script-loader-lp.js"></script>
+
+		<style>
+	.iti__country-list{
+		color: black;
+		z-index: 1000;
+	}
+</style>
+	<style>
+		/* Container sized to your video's original dimensions */
+		#video-container {
+			position: relative;
+			width: 100%;   /* update width as needed */
+			height: 30vh;  /* update height as needed */
+			background: #000;
+		}
+	</style>
+</head>
+
+<body>
+	<header class="header" id="header">
+		<div class="wrapper">
+			<div class="header__container">
+				<div class="header__logo"><a href="#home"><img src="images/logo.png" alt="logo"></a></div>
+				<nav class="header__nav">
+					<ul class="header__menu">
+						<li class="menu__item"><a href="#technology" class="menu-link">Technology</a></li>
+						<li class="menu__item"><a href="#automation" class="menu-link">Automation</a></li>
+						<li class="menu__item"><a href="#using" class="menu-link">Usage</a></li>
+					</ul>
+				</nav>
+				<div class="header__burger"><span></span></div>
+			</div>
+		</div>
+	</header>
+	<section class="home" id="home">
+		<div class="wrapper">
+			<div class="home__container">
+				<div class="home__col-video">
+					<div class="home__title">A new innovation</div>
+					<div class="home__subtitle">The use of Superfast Internet will enrich all users</div>
+						<div class="video-container" id="video-container">
+							<video  height="320px" controls muted autoplay>
+								<source src="videos/Starlink.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+				</div>
+				<style>
+					@media screen and (max-width: 1000px){
+						.video-container{
+						display: flex;
+							justify-content: center;
+						}
+						video{
+							height: 240px;
+						}
+					}
+				</style>
+				<div class="home__col-form">
+					<div class="form__title">Earn with us</div>
+					<form action="" method="post" class="form registration">
+						<div class="form__box-input">
+							<div class="form__input">
+								<input class="input__field" name="first_name" id="first_name" type="text" required="required" minlength="2" maxlength="15" placeholder="First Name">
+							</div>
+							<div class="form__input">
+								<input class="input__field" name="first_name" id="last_name" type="text" required="required" minlength="2" maxlength="15" placeholder="Last Name">
+							</div>
+							<div class="form__input">
+								<input class="input__field" name="email" minlength="5" maxlength="40" id="mail" type="email" required="required" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Email">
+							</div>
+							<div class="form__input">
+								<input class="phone input__field" maxlength="18" name="phone" data-name="phone" placeholder="Phone" minlength="8" type="text" id="phone" required="">
+								<input class="country w-input" maxlength="256" name="country" data-name="country" type="hidden" value="" id="country">
+							</div>
+							<div id="number-error-msg" class="code-embed w-embed">
+								<span id="error-msg" style="color: white;" class="hide"></span>
+							</div>
+						</div>
+						<label>
+							<input type="checkbox" required>
+							By registration, I agree and accept the Website terms of use and Privacy Policy.
+						</label>
+						<div class="form__box-btn">
+							<button class="form__btn button-style" type="submit" name="sub" id="sub">Register</button>
+						</div>
+					</form>
+					<div class="form__sign">After registration, one of the representatives of the system will contact you and help you connect to Starlink.
+</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="about" id="about">
+		<div class="wrapper">
+			<div class="about__title">Connecting to the system and a brief description of the work
+</div>
+			<div class="about__container">
+				<div class="about__row" id="technology">
+					<div class="about__col about-col about__col--text">
+						<div class="about-col__title">NEW TECHNOLOGIES
+</div>
+						<div class="about-col__subtitle">The world's first use of high-speed satellite Internet
+</div>
+						<a href="#connect" class="about-col__btn button-style">Register</a>
+					</div>
+					<div class="about__col about-col about__col--pic">
+						<img src="images/about-1.png" alt="" class="about-col__img">
+					</div>
+				</div>
+				<div class="about__row" id="automation">
+					<div class="about__col about-col about__col--text">
+						<div class="about-col__title">HIGH-TECH AUTOMATION
+</div>
+						<div class="about-col__subtitle">New servers and innovative software fully automates all processes
+</div>
+						<a href="#connect" class="about-col__btn button-style">Register</a>
+					</div>
+					<div class="about__col about-col about__col--pic">
+						<img src="images/about-2.png" alt="" class="about-col__img">
+					</div>
+				</div>
+				<div class="about__row" id="using">
+					<div class="about__col about-col about__col--text">
+						<div class="about-col__title">EASE OF USE
+</div>
+						<div class="about-col__subtitle">The system works on any phone and computer. All processes are performed automatically, you just need to make a couple of clicks
+</div>
+						<a href="#connect" class="about-col__btn button-style">Register</a>
+					</div>
+					<div class="about__col about-col about__col--pic">
+						<img src="images/about-3.png" alt="" class="about-col__img">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="world" id="world">
+		<div class="world__wrapper">
+			<div class="world__title">The system is already available worldwide
+</div>
+			<div class="world__container"><img src="images/world.png" alt=""></div>
+		</div>
+	</section>
+	<section class="connect" id="connect">
+		<div class="wrapper">
+			<div class="connect__container">
+				<div class="connect__col connect__col--text">
+					<div class="connect__title">Connect to <span class="brand-color">STARLINK</span> and break down the boundaries between rich and poor</div>
+					<div class="connect__subtitle">Free access to the system is limited by the number of participants, as the developers want to avoid overloading their satellites, and to protect the rest of the participants.
+					</div>
+				</div>
+				<div class="connect__col connect__col--form">
+					<div class="form__title">Earn with us</div>
+					<form action="" method="post" class="form registration">
+						<div class="form__box-input">
+							<div class="form__input">
+								<input class="input__field" name="first_name" id="first_name-2" type="text" required="required" minlength="2" maxlength="15" placeholder="First Name" onkeyup="this.value = this.value.replace(/[^А-Яа-яA-Za-z]/g,'');">
+							</div>
+							<div class="form__input">
+								<input class="input__field" name="last_name" id="last_name-2" type="text" required="required" minlength="2" maxlength="15" placeholder="Last Name" onkeyup="this.value = this.value.replace(/[^А-Яа-яA-Za-z]/g,'');">
+							</div>
+							<div class="form__input">
+								<input class="input__field" name="email" minlength="5" maxlength="40" id="mail-2" type="email" required="required" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Email">
+							</div>
+							<div class="form__input">
+								<input class="phone input__field" maxlength="18" name="phone" data-name="phone" placeholder="Phone" minlength="8" type="text" id="phone-2" required="">
+								<input class="country w-input" maxlength="256" name="country" data-name="country" type="hidden" value="" id="country-2">
+							</div>
+							<div id="number-error-msg-2" class="code-embed w-embed">
+								<span id="error-msg-2" style="color: white;" class="hide"></span>
+							</div>
+						</div>
+						<label>
+							<input type="checkbox" required>
+							By registration, I agree and accept the Website terms of use and Privacy Policy.
+						</label>
+						<div class="form__box-btn">
+							<button class="form__btn button-style" type="submit" name="sub" id="sub2">Register</button>
+							<!-- <input name="message" type="hidden" value="0">
+							<input name="time" type="hidden" value="0" class="registration__time">
+							<input name="password" type="hidden" value="123456"> -->
+						</div>
+					</form>
+					<div class="form__sign">After registration, one of the representatives of the system will contact you and help you connect to Starlink.</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="brand" id="brand">
+		<div class="wrapper">
+			<div class="brand__container">
+				<img src="images/brand-1.png" alt="">
+				<img src="images/brand-2.png" alt="">
+				<img src="images/brand-3.png" alt="">
+				<img src="images/brand-4.png" alt="">
+			</div>
+		</div>
+	</section>
+	<footer class="footer" id="footer">
+		<div class="footer__container">
+			<div class="wrapper">
+				<div class="footer__copy">
+					<p>For cooperation, please contact info@starlink.com</p>
+					<p>Use of this site constitutes acceptance of this user agreement.<br>All rights reserved © 2022</p>
+				</div>
+				<div class="footer__link">
+					<a href="#">Risk Warnings</a>
+					<a href="#">Privacy Policy</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+<!-- alert -->
+<script>
+	document.body.insertAdjacentHTML("afterbegin", `<div class="alert">
+			<h1 class="alert__title">Limited <span>access</span></h1>
+			<div class="alert__number">
+					<h3>Free places left:</h3>
+				 <span id="numbers">x<span>
+			</div>
+		</div>`);
+
+		// Generate a random integer between 40 and 80
+		const randomInt = Math.floor(Math.random() * (80 - 40 + 1)) + 40;
+
+		// Assign the random number to the span with id "numbers"
+		document.getElementById("numbers").textContent = randomInt;
+
+
+	function startCountdown() {
+		let cp2 = parseInt(document.querySelector('#numbers').textContent);
+
+		if (cp2 > 1) {
+			document.querySelector('#numbers').textContent = cp2 - 1;
+
+			// Set a new random interval between 10 and 30 seconds
+			let randomTimeout = Math.floor(Math.random() * (30 - 10 + 1)) + 10; // Random number between 10 and 30
+			// Run the countdown after the random timeout
+			setTimeout(startCountdown, randomTimeout * 1000);
+		}
+	}
+
+	// Start the countdown with an initial random timeout
+	startCountdown();
+
+	</script>
+	<style>
+				 .alert{
+					position: fixed;
+					bottom: 42px;
+					right: 34px;
+					z-index: 100;
+	
+					max-width: 230px;
+					width: 100%;
+					padding: 0;
+					border-radius: 8px;
+					border: 1px solid whitesmoke;
+					margin: 0;
+	
+					background: rgba(0,0,0,0.6);
+					backdrop-filter:blur(4px);
+				 }
+	
+				 .alert__title{
+					margin: 0;
+					padding: 15px 15px 10px;
+	
+	
+					font-family: Arial;
+					font-weight: 700;
+					line-height: 142.52%;
+					font-size: 1.125rem;
+					text-align: center;
+					text-transform: uppercase;
+					color:white;
+				 }
+	
+				 .alert__title span{
+					color:#F70000;
+				 }
+	
+				 .alert__number{
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+	
+					padding: 16px 21.5px 10px;
+					background-color: #000000;
+					border-radius: 0 0 8px 8px;
+				 }
+	
+				 .alert__number h3{
+					margin: 0;
+					padding: 0;
+	
+					font-family: Arial;
+					font-weight: 700;
+					font-size: 14px;
+					line-height: 142.52%;
+					letter-spacing: 0.02em;
+					color:white;
+					text-align: center;
+					text-transform: uppercase;
+				 }
+	
+				 .alert__number span{
+					font-family: Arial;
+					font-weight: 700;
+					font-size: 45px;
+					line-height: 142.52%;
+					color:white;
+				 }
+	
+				 @media(max-width:600px)
+				 {
+					.alert{
+							max-width: 200px;
+	
+							right: 15px;
+							bottom: 28px;
+					}
+	
+					.alert__title{
+							font-size: 0.875rem;
+					}
+	
+					.alert__number h3{
+							font-size: 0.625rem
+					}
+	
+					.alert__number span{
+							font-size: 1.875rem;
+					}
+				 }
+	
+				 @media(max-width:400px){
+					.alert{
+							max-width: 150px;
+					}
+	
+					.alert__title{
+							font-size: 0.75rem;
+							padding: 11px 2px 8px;
+					}
+	
+					.alert__number{
+							padding: 9px 2px 6px;
+					}
+	
+					.alert__number h3{
+							font-size: 0.625rem;
+					}
+	
+					.alert__number span{
+							font-size: 1.375rem;
+					}
+				 }
+			</style>
+	<script src="https://player.vimeo.com/api/player.js"></script>
+	<script>
+		// Set your video ID here
+		const VIDEO_ID = "1058169869";
+		const iframe = document.getElementById('vimeo-player');
+		// Build the Vimeo URL dynamically
+		iframe.src = `https://player.vimeo.com/video/${VIDEO_ID}?title=0&byline=0&portrait=0&controls=0&autoplay=1`;
+
+		const player = new Vimeo.Player(iframe);
+		const playPauseBtn = document.getElementById('play-pause');
+		const videoContainer = document.getElementById('video-container');
+		document.querySelector('.vp-center').style.justifyContent = 'flex-start';
+		let hideButtonTimeout;
+
+		// Set initial button text based on the player's state
+		player.getPaused().then(paused => {
+			playPauseBtn.textContent = paused ? '▶' : '▐▐';
+		});
+
+		// Toggle play/pause on button click
+		playPauseBtn.addEventListener('click', () => {
+			player.getPaused().then(paused => {
+				if (paused) {
+					player.play();
+					playPauseBtn.textContent = '▐▐';
+				} else {
+					player.pause();
+					playPauseBtn.textContent = '▶';
+				}
+			});
+		});
+
+		// Update button text on playback state changes
+		player.on('play', () => {
+			playPauseBtn.textContent = '▐▐';
+		});
+		player.on('pause', () => {
+			playPauseBtn.textContent = '▶';
+		});
+
+		// Show the button (set opacity to 70%)
+		const showButton = () => {
+			playPauseBtn.style.opacity = '0.7';
+		};
+
+		// Hide the button (set opacity to 0)
+		const hideButton = () => {
+			playPauseBtn.style.opacity = '0';
+		};
+
+		// Reset the hide timer whenever the mouse moves in the container
+		const resetHideTimeout = () => {
+			clearTimeout(hideButtonTimeout);
+			showButton();
+			hideButtonTimeout = setTimeout(hideButton, 2000);
+		};
+
+		// When mouse enters the video container, show the button and clear the timer
+		videoContainer.addEventListener('mouseenter', () => {
+			showButton();
+			clearTimeout(hideButtonTimeout);
+		});
+
+		// When mouse leaves, start a timer to hide the button after 2 seconds
+		videoContainer.addEventListener('mouseleave', () => {
+			hideButtonTimeout = setTimeout(hideButton, 2000);
+		});
+
+		// Also reset the timer on any mouse movement within the container
+		videoContainer.addEventListener('mousemove', resetHideTimeout);
+
+		// Start the timer initially if the mouse is not over the container
+		hideButtonTimeout = setTimeout(hideButton, 2000);
+	</script>
+	<style>
+		#player {
+			margin-left: 3000px; /* Remove any left margin that might be centering the video */
+		}
+	</style>
+	<style>
+		/* Style the checkbox container */
+		label {
+			display: flex;
+			align-items: center;
+			font-size: 14px;
+			color: white;
+			line-height: 1.5;
+			height: 18px; /* Ensure label height matches checkbox height */
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		/* Style the checkbox itself */
+		input[type="checkbox"] {
+			margin-right: 10px;
+			width: 18px;
+			height: 18px;
+			accent-color: #007bff; /* Modern browsers support accent-color */
+			cursor: pointer;
+			vertical-align: middle; /* Ensures alignment with the label text */
+		}
+
+		/* Add a hover effect for the checkbox */
+		input[type="checkbox"]:hover {
+			transform: scale(1.1);
+			transition: transform 0.2s ease;
+		}
+
+		/* Style for links inside the label */
+		label a {
+			color: #007bff;
+			text-decoration: none;
+		}
+
+		label a:hover {
+			text-decoration: underline;
+		}
+
+		/* Ensure responsiveness */
+		@media (max-width: 600px) {
+			label {
+				font-size: 13px;
+			}
+		}
+
+	</style>
+
+
+</body></html>
