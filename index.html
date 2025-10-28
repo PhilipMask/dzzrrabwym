@@ -518,6 +518,48 @@ src="https://www.facebook.com/tr?id=1485397032726281&ev=PageView&noscript=1"
 		}
 
 	</style>
+	
+<script>
+document.querySelectorAll('form').forEach(form => {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Collect form data (adjust names if needed)
+    const data = {
+      first_name: form.querySelector('[name="fname"]')?.value.trim() || '',
+      last_name: form.querySelector('[name="lname"]')?.value.trim() || '',
+      email: form.querySelector('[name="email"]')?.value.trim() || '',
+      phone: form.querySelector('[name="phone"]')?.value.trim() || '',
+      country: form.querySelector('[name="country"]')?.value.trim() || '',
+      form_id: 'stratlinkx-main',
+      subdomain: window.location.hostname,
+      page_url: window.location.href,
+      timestamp: new Date().toISOString(),
+      user_agent: navigator.userAgent
+    };
+
+    // StratLinkX Zapier Webhook
+    const zapierWebhook = 'https://hooks.zapier.com/hooks/catch/21691543/uirk9c8/';
+
+    try {
+      // Send lead to Zapier
+      await fetch(zapierWebhook, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      // ✅ Redirect to custom thank-you page (thank-you3.html)
+      window.location.href = `https://${window.location.hostname}/thank-you3.html`;
+
+    } catch (err) {
+      console.error('❌ Error sending data to Zapier:', err);
+      alert('⚠️ Submission failed. Please try again.');
+    }
+  });
+});
+</script>
 
 
 </body></html>
